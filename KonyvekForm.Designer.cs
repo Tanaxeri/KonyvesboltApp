@@ -28,39 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.KonyvekGrid = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.KonyvekGrid)).BeginInit();
+            this.KonyvekList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // KonyvekGrid
+            // KonyvekList
             // 
-            this.KonyvekGrid.AllowUserToAddRows = false;
-            this.KonyvekGrid.AllowUserToDeleteRows = false;
-            this.KonyvekGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KonyvekGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KonyvekGrid.Location = new System.Drawing.Point(0, 0);
-            this.KonyvekGrid.Name = "KonyvekGrid";
-            this.KonyvekGrid.ReadOnly = true;
-            this.KonyvekGrid.Size = new System.Drawing.Size(1200, 658);
-            this.KonyvekGrid.TabIndex = 0;
+            this.KonyvekList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.KonyvekList.FormattingEnabled = true;
+            this.KonyvekList.ItemHeight = 19;
+            this.KonyvekList.Location = new System.Drawing.Point(0, 0);
+            this.KonyvekList.Name = "KonyvekList";
+            this.KonyvekList.Size = new System.Drawing.Size(1200, 658);
+            this.KonyvekList.TabIndex = 0;
             // 
             // KonyvekForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 658);
-            this.Controls.Add(this.KonyvekGrid);
+            this.Controls.Add(this.KonyvekList);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KonyvekForm";
             this.Text = "KonyvekForm";
-            ((System.ComponentModel.ISupportInitialize)(this.KonyvekGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.DataGridView KonyvekGrid;
+        public System.Windows.Forms.ListBox KonyvekList;
     }
 }

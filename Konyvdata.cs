@@ -36,5 +36,10 @@ namespace KonyvesboltApp
             this.konyv_ar = konyv_ar;
         }
 
+        public override string ToString()
+        {
+            return konyv_cim + konyv_ar + "Ft";
+        }
+
     }
 }

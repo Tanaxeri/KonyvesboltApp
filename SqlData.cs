@@ -80,15 +80,18 @@ namespace KonyvesboltApp
         }
 
         public void KonyvekGridUpdate()
-        {           
+        {
 
+            
             if (databaseOpen())
-            {                
+            {
 
+                Program.konyvekform.KonyvekList.Items.Clear();
                 try
                 {
 
-                    sqlcommand = new MySqlCommand("SELECT * FROM `konyv`;", sqlconnection);
+                    
+                    sqlcommand = new MySqlCommand("SELECT * FROM konyv; ");
 
                     using (MySqlDataReader rd = sqlcommand.ExecuteReader())
                     {
@@ -97,7 +100,7 @@ namespace KonyvesboltApp
                         {
 
                             Konyvdata ujkonyvdata = new Konyvdata(rd.GetInt32("konyvid"), rd.GetString("szerzo"), rd.GetString("cim"), rd.GetInt32("megjelenesi_ev"), rd.GetString("megjelenes_helye"), rd.GetString("kiado"), rd.GetString("kategoria"), rd.GetString("nyelv"), rd.GetString("sorozatcim"), rd.GetInt32("isbn"), rd.GetInt32("ar"));
-                            Program.konyvekform.KonyvekGrid.DataSource = ujkonyvdata;                          
+                            Program.konyvekform.KonyvekList.Items.Add(ujkonyvdata);                          
 
                         }
 
